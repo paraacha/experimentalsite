@@ -2,23 +2,9 @@
 <html>
 <body>
 
-<h2>Using the XMLHttpRequest Object</h2>
+<h2>Using the Fetch API</h2>
 
-<div id="demo">
-<button type="button">Button</button>
-</div>
-
-<script>
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML =
-      this.responseText;
-    }
-  };
-  xhttp.open("GET", "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js", true);
-  xhttp.send();
-  
+<script>  
  fetch('https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js').then(function (response) {
 	// The API call was successful!
 	return response;
